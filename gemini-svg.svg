@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="100%" height="100%">
+  <!-- Rounded Lime-Yellow Background -->
+  <rect width="512" height="512" rx="115" fill="#D6FA62"/>
+  
+  <!-- Dark Stylized Italic 'H' -->
+  <g fill="#0D1E1B" transform="skewX(-16) translate(65, 0)">
+    <!-- Left Stem -->
+    <rect x="185" y="115" width="48" height="282" rx="4"/>
+    <!-- Right Stem -->
+    <rect x="295" y="115" width="48" height="282" rx="4"/>
+    <!-- Crossbar -->
+    <rect x="220" y="234" width="90" height="44"/>
+  </g>
+</svg>
