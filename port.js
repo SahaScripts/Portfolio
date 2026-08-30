@@ -160,6 +160,25 @@ function handleSubmit(e) {
   }, 1000);
 }
 
+/* ── Interactive background glow: follows the cursor ── */
+const bgGlow = document.getElementById('bgGlow');
+if (bgGlow) {
+  let glowActive = false;
+  window.addEventListener('mousemove', (e) => {
+    document.documentElement.style.setProperty('--mouse-x', `${e.clientX}px`);
+    document.documentElement.style.setProperty('--mouse-y', `${e.clientY}px`);
+    if (!glowActive) {
+      bgGlow.classList.add('active');
+      glowActive = true;
+    }
+  });
+  // Fade it out again if the cursor leaves the window
+  document.addEventListener('mouseleave', () => {
+    bgGlow.classList.remove('active');
+    glowActive = false;
+  });
+}
+
 /* ── Staggered skill card animation ── */
 const skillCards = document.querySelectorAll('.skill-card');
 skillCards.forEach((card, i) => {
